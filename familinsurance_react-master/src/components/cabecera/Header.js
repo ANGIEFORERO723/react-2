@@ -18,7 +18,7 @@ export default class Header extends Component {
             <div className="col-auto header-fixed-col">
 
               <a href="/" className="logo" title="PathSoft">
-                <img src={require('../../img/logo.PNG')} width="100" height="300" alt="PathSoft" />
+                <img src='/img/logo.PNG' width="100" height="300" alt="PathSoft" />
               </a>
             </div>
             <div className="col-auto header-fixed-col d-none d-lg-block col-static">

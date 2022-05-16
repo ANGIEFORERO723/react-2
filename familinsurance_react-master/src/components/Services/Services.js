@@ -5,7 +5,14 @@ export default function Services() {
   const [serviceList, setServiceList] = useState([]);
 
   // const services = ["tarjeta de crédito", "CDT"];
-  const services = [{ title: 'uno', image: '', description: 'descript 1' ,category:'uno'}, { title: 'otro', image: '', description: '',category:'uno' },{ title: 'dos', image: '', description: '',category:'dos' }];
+  const services = [{Id:'', Nombre: '', Imagen: '', Descripcion: '' ,Categoria:''}];
+  {/*fetch("http://localhost:5000/",{
+      method: "GET",
+      headers:{"Content-Type":"application/json"},
+      body:JSON. stringify(services)
+  }).then( ()=>{
+    console.log("se ingreso un servicio ")
+  })*/}
 
   useEffect(() => {
     console.log(`pintando componente servicios`);
@@ -13,22 +20,20 @@ export default function Services() {
   }, []);
 
   const getServices = async () => {
-    const URL = "http://localhost:5000/service";
+    const URL = "http://localhost:5000/";
     const services = await fetch(URL);
     const servicesList_ = await services.json();
     setServiceList(servicesList_);
   };
-
   return (
     <div>
-      <h2>Mis servicios</h2>
-      <ul>
-        {serviceList.filter(x=>x.category=='uno').map((item, perro) => (
-          <li key={perro}>
-            <Card image={item.image} title={item.name} description={item.description} />
+     {/* <ul>
+        {serviceList.filter(x=>x.Categoria ==='Servicios principales').map((item, aseguradora) => (
+          <li key={aseguradora}>
+            <Card Imagen={item.Imagen} Nombre={item.Nombre} Descripcion={item.Descripcion} />
           </li>
         ))}
-      </ul>
+        </ul>*/}
       <div class="section">
         <div class="container">
           <div class="row items">
@@ -52,13 +57,12 @@ export default function Services() {
           <div class="section">
             <div class="container">
               <div class="row items justify-content-center">
-
-                <div class="col-lg-4 col-md-6 col-12 item">
-                  {services.filter(x=>x.category=='uno').map((item, perro) => (
-
-                    <Card image={item.image} title={item.title} description={item.description} />
-
-                  ))}
+                <div class="col-lg-4 col-md-6 col-12">
+                   {serviceList.filter(x => x.id == 1).filter(x=>x.Categoria ==='Servicios principales').map((item, aseguradora) => (
+                   <div key={aseguradora}>
+                   <Card Imagen={item.Imagen} Nombre={item.Nombre} Descripcion={item.Descripcion} />
+                   </div>
+                     ))}
                   {/*<a href="chatea-nosotros.html" class="iitem item-style">
 								<div class="iitem-icon">
                                     <img src= {require('../../img/icons/credit-card.png')} width="75" height="75" alt="PathSoft"/>
@@ -74,12 +78,15 @@ export default function Services() {
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 item">
-
-
-                  <a href="chatea-nosotros.html" class="iitem item-style">
+                {serviceList.filter(x => x.id == 2).filter(x=>x.Categoria ==='Servicios principales').map((item, aseguradora) => (
+                   <div key={aseguradora}>
+                   <Card Imagen={item.Imagen} Nombre={item.Nombre} Descripcion={item.Descripcion} />
+                   </div>
+                     ))}
+                 {/*  <a href="chatea-nosotros.html" class="iitem item-style">
                     <div class="iitem-icon">
-                      <img src={require('../../img/icons/chat.png')} width="75" height="75" alt="PathSoft" />
-                      {/*<i class="material-icons material-icons-outlined md-48">support_agent</i> */}
+                      <img src='/img/icons/chat.png' width="75" height="75" alt="PathSoft" />
+                      {/*<i class="material-icons material-icons-outlined md-48">support_agent</i> 
                     </div>
                     <div class="iitem-icon-bg">
                       <i class="material-icons material-icons-outlined">support_agent</i>
@@ -87,12 +94,13 @@ export default function Services() {
                     <h2 class="iitem-heading item-heading-large">Chatea con Nosotros</h2>
                     <div class="iitem-desc"> Accede a nuestros canales de atencion con facilidad   </div>
                   </a>
+                   */}
                 </div>
                 <div class="col-lg-4 col-md-12 col-12 item">
 
                   <a href="facturaelec.html" class="iitem item-style">
                     <div class="iitem-icon">
-                      <img src={require('../../img/icons/factura.png')} width="75" height="75" alt="PathSoft" />
+                      <img src='/img/icons/factura.png' width="75" height="75" alt="PathSoft" />
                       {/*	<i class="material-icons material-icons-outlined md-48">cloud_download</i> */}
                     </div>
                     <div class="iitem-icon-bg">
@@ -106,7 +114,7 @@ export default function Services() {
 
                   <a href="ExperienciaFamilin.html" class="iitem item-style">
                     <div class="iitem-icon">
-                      <img src={require('../../img/icons/experiencia.png')} width="75" height="75" alt="PathSoft" />
+                      <img src='/img/icons/experiencia.png' width="75" height="75" alt="PathSoft" />
                       {/*<i class="material-icons material-icons-outlined md-48">laptop_mac</i>*/}
                     </div>
                     <dir /> <dir />
@@ -124,7 +132,7 @@ export default function Services() {
 
                   <a href="E-cliente.html" class="iitem item-style">
                     <div class="iitem-icon">
-                      <img src={require('../../img/icons/web.png')} width="70" height="70" alt="PathSoft" />
+                      <img src='/img/icons/web.png' width="70" height="70" alt="PathSoft" />
                       {/*<i class="material-icons material-icons-outlined md-48">phone_android</i> */}
                     </div>
                     <div class="iitem-icon-bg">
@@ -153,7 +161,7 @@ export default function Services() {
 
                 <a href="centros-medicos.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/salud.png')} width="80" height="80" alt="PathSoft" />
+                    <img src='/img/icons/salud.png' width="80" height="80" alt="PathSoft" />
                     {/* <i class="material-icons material-icons-outlined md-48">corporate_fare</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -169,7 +177,7 @@ export default function Services() {
 
                 <a href="directorio-medico.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/directorio.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/directorio.png' width="75" height="75" alt="PathSoft" />
                     {/*<i class="material-icons material-icons-outlined md-48">support_agent</i>  */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -184,7 +192,7 @@ export default function Services() {
 
                 <a href="reembolsos-autorizaciones.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/reembolso.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/reembolso.png' width="75" height="75" alt="PathSoft" />
                     {/*	<i class="material-icons material-icons-outlined md-48">cloud_download</i>  */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -199,7 +207,7 @@ export default function Services() {
 
                 <a href="especialistas.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/cell.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/cell.png' width="75" height="75" alt="PathSoft" />
                     {/*<i class="material-icons material-icons-outlined md-48">laptop_mac</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -213,7 +221,7 @@ export default function Services() {
 
                 <a href="orientacion.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/call2.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/call2.png' width="75" height="75" alt="PathSoft" />
                     {/*<i class="material-icons material-icons-outlined md-48">phone_android</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -227,7 +235,7 @@ export default function Services() {
 
                 <a href="centro-ayuda.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/ayuda.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/ayuda.png' width="75" height="75" alt="PathSoft" />
                     {/*	<i class="material-icons material-icons-outlined md-48">tv</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -254,7 +262,7 @@ export default function Services() {
 
                 <a href="E-car.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/cell.png')} width="80" height="80" alt="PathSoft" />
+                    <img src='/img/icons/cell.png' width="80" height="80" alt="PathSoft" />
                     {/* <i class="material-icons material-icons-outlined md-48">corporate_fare</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -269,7 +277,7 @@ export default function Services() {
 
                 <a href="caso-accidente.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/car.png')} width="100" height="100" alt="PathSoft" />
+                    <img src='/img/icons/car.png' width="100" height="100" alt="PathSoft" />
                     {/*<i class="material-icons material-icons-outlined md-48">support_agent</i>  */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -284,7 +292,7 @@ export default function Services() {
 
                 <a href="talleres.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/taller.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/taller.png' width="75" height="75" alt="PathSoft" />
                     {/*	<i class="material-icons material-icons-outlined md-48">cloud_download</i>  */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -311,7 +319,7 @@ export default function Services() {
 
                 <a href="peritacion.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/home.png')} width="80" height="80" alt="PathSoft" />
+                    <img src='/img/icons/home.png' width="80" height="80" alt="PathSoft" />
                     {/* <i class="material-icons material-icons-outlined md-48">corporate_fare</i> */}
                   </div>
                   <div class="iitem-icon-bg">
@@ -326,7 +334,7 @@ export default function Services() {
 
                 <a href="E-car-hogar.html" class="iitem item-style">
                   <div class="iitem-icon">
-                    <img src={require('../../img/icons/home2.png')} width="75" height="75" alt="PathSoft" />
+                    <img src='/img/icons/home2.png' width="75" height="75" alt="PathSoft" />
                     {/*<i class="material-icons material-icons-outlined md-48">support_agent</i>  */}
                   </div>
                   <div class="iitem-icon-bg">
