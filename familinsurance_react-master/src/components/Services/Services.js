@@ -200,7 +200,7 @@ export default function Services() {
             <div class="row items">
               <div class="col-12">
                 <div class="section-heading heading-center">
-                  <h4>Servicios del Seguro de Hogar</h4>
+                  <h4>Servicios del seguro de Hogar</h4>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 col-12 item seguro-home">
