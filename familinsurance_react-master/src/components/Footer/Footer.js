@@ -81,7 +81,7 @@ export default class Footer extends Component {
                   </div>
                   <div class="col-xs-4 col-lg-4 col-12 item">
                       <div class="footer-item">
-                          <p class="footer-item-heading">Our contacts</p>
+                          <p class="footer-item-heading">Nuestros Contactos</p>
                           <ul class="footer-contacts">
                               <li>
                                   <i class="material-icons md-22">location_on</i>
@@ -125,13 +125,13 @@ export default class Footer extends Component {
                   <div class="col-md-auto col-12 item">
                       <nav class="footer-links">
                           <ul>
-                              <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
-                              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                              <li><a href="terms-and-conditions.html">Terminos y condiciones</a></li>
+                              <li><a href="privacy-policy.html">Políticas de Privacidad</a></li>
                           </ul>
                       </nav>
                   </div>
                   <div class="col-md-auto col-12 item">
-                      <div class="copyright">Familisurance .</div>
+                      <div class="copyright">Derechos Reservados de Familisurance.</div>
                   </div>
               </div>
           </div>
