@@ -56,11 +56,11 @@ export default class Footer extends Component {
                           <p class="footer-item-heading">Menu</p>
                           <nav class="footer-nav">
                               <ul class="footer-mnu">
-                                  <li><a href="about-us.html" class="hover-link" data-title="About Us"><span>About Us</span></a></li>
-                                  <li><a href="services.html" class="hover-link" data-title="Services"><span>Services</span></a></li>
-                                  <li><a href="typography.html" data-title="Typography"><span>Typography</span></a></li>
-                                  <li><a href="news.html" class="hover-link" data-title="News"><span>News</span></a></li>
-                                  <li><a href="contact-us.html" class="hover-link" data-title="Contact Us"><span>Contact Us</span></a></li>
+                                  <li><a href="about-us.html" class="hover-link" data-title="About Us"><span>Sobre Nosotros</span></a></li>
+                                  <li><a href="services.html" class="hover-link" data-title="Services"><span>Servicios</span></a></li>
+                                  <li><a href="typography.html" data-title="Typography"><span>Ahorro e Inversiones</span></a></li>
+                                  <li><a href="news.html" class="hover-link" data-title="News"><span>Contactanos</span></a></li>
+                                  <li><a href="contact-us.html" class="hover-link" data-title="Contact Us"><span>Soporte al Cliente</span></a></li>
                               </ul>
                           </nav>
                       </div>
@@ -104,14 +104,14 @@ export default class Footer extends Component {
                           </ul>
                       </div>
                       <div class="footer-item">
-                          <p class="footer-item-heading">Subscribe</p>
+                          <p class="footer-item-heading">Subscríbete</p>
                           <form action="#!" method="post" class="footer-subscribe">
                               <div class="form-field">
                                   <label for="subscribe-email" class="form-field-label">Email</label>
                                   <input type="email" class="form-field-input" name="Subscribe_email" value="" autocomplete="off" required="required" id="subscribe-email"/>
                               </div>
                               <div class="form-btn">
-                                  <button type="submit" class="btn ripple"><span>Subscribe</span></button>
+                                  <button type="submit" class="btn ripple"><span>Subscribir</span></button>
                               </div>
                           </form>
                       </div>
