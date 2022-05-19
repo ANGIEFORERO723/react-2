@@ -131,7 +131,7 @@ export default class Footer extends Component {
                       </nav>
                   </div>
                   <div class="col-md-auto col-12 item">
-                      <div class="copyright">© 2021 PathSoft. All rights reserved.</div>
+                      <div class="copyright">Familisurance .</div>
                   </div>
               </div>
           </div>
