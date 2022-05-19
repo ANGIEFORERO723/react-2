@@ -15,7 +15,7 @@ export default class Footer extends Component {
                                   <img data-src="assets/img/logo.PNG" width="200" height="200" class="lazy" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="PathSoft"/>
                               </a>
                               <div class="footer-company-desc">
-                                  <p>Our company has been developing high-quality and reliable software for corporate needs since 2008. We are renowned professionals of software development.</p>
+                                  <p>Somos una empresa con más de 20 años de experiencia en la industria aseguradora colombiana. Contamos con un equipo dedicado a ayudar a las personas a tomar las mejores decisiones.</p>
                               </div>
                           </div>
                           <ul class="footer-social-links">
@@ -67,7 +67,7 @@ export default class Footer extends Component {
                   </div>
                   <div class="col-xl-2 col-lg-3 col-md-3 col-7 item">
                       <div class="footer-item">
-                          <p class="footer-item-heading">What We Offer</p>
+                          <p class="footer-item-heading">Lo Que Ofrecemos</p>
                           <nav class="footer-nav">
                               <ul class="footer-mnu">
                                   <li><a href="#!" class="hover-link" data-title="DB Management"><span>DB Management</span></a></li>
@@ -86,7 +86,7 @@ export default class Footer extends Component {
                               <li>
                                   <i class="material-icons md-22">location_on</i>
                                   <div class="footer-contact-info">
-                                      301 S Irving Blvd Los Angeles, CA 90020
+                                      301 Barrio La Esmeralda, CA 90020
                                   </div>
                               </li>
                               <li>
@@ -98,7 +98,7 @@ export default class Footer extends Component {
                               <li>
                                   <i class="material-icons md-22 footer-contact-email">email</i>
                                   <div class="footer-contact-info">
-                                      <a href="mailto:mail@example.com">mail@example.com</a>
+                                      <a href="mailto:mail@example.com">SoporteFamilisurance@gmail.com</a>
                                   </div>
                               </li>
                           </ul>
@@ -107,7 +107,7 @@ export default class Footer extends Component {
                           <p class="footer-item-heading">Subscribe</p>
                           <form action="#!" method="post" class="footer-subscribe">
                               <div class="form-field">
-                                  <label for="subscribe-email" class="form-field-label">Your email</label>
+                                  <label for="subscribe-email" class="form-field-label">Email</label>
                                   <input type="email" class="form-field-input" name="Subscribe_email" value="" autocomplete="off" required="required" id="subscribe-email"/>
                               </div>
                               <div class="form-btn">
