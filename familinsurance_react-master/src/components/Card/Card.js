@@ -7,6 +7,8 @@ export default function Card({Imagen, Nombre, Descripcion }) {
       {/*<img src={image} alt={title} />
       <h1>{title}</h1>
       <p>{description}</p*/}
+      <p className="test-color">lorem ipsum </p>
+      <p className="test-color">lorem ipsum </p>
       <a href="chatea-nosotros.html" class="iitem item-style">
         <div class="iitem-icon">
           <img src={Imagen} width="75" height="75" alt="PathSoft" />
