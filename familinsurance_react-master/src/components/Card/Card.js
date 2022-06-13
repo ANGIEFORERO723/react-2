@@ -4,8 +4,7 @@ import "./Card.css";
 export default function Card({Imagen, Nombre, Descripcion }) {
   return (
     <div className="card" > 
-      <p className="red-color">lorem ipsum </p>
-      <p className="red-color">lorem ipsum </p>
+      <p>test</p>
       <a href="chatea-nosotros.html" class="iitem item-style">
         <div class="iitem-icon">
           <img src={Imagen} width="75" height="75" alt="PathSoft" />
