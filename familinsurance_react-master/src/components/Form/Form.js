@@ -11,7 +11,7 @@ export default function Form() {
     console.log(`email`, email);
     const URL = "http://localhost:5000/newsletter";
     const data={
-        name,email
+        nombre:name,email
     }
     const config={
         body:JSON.stringify(data),
