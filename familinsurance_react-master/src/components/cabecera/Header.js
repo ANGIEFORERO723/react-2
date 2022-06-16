@@ -38,7 +38,7 @@ export default class Header extends Component {
 
               <nav className="main-mnu">
                 <ul className="">
-                  <li><a href="index.html" class="btn btn-primary btn-lg active"  aria-pressed="true" role="button" data-title="Acceso clientes"><span>Acceso a clientes</span></a></li>
+                  <li><a href="index.html" className="btn btn-primary btn-lg active"  aria-pressed="true" role="button" data-title="Acceso clientes"><span>Acceso a clientes</span></a></li>
                 </ul>
               </nav>
 
