@@ -11,7 +11,7 @@ export default function Form() {
     console.log(`email`, email);
     const URL = "http://localhost:5000/newsletter";
     const data={
-        name,email
+        nombre:name,email
     }
     const config={
         body:JSON.stringify(data),
@@ -27,7 +27,7 @@ export default function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div class="container">
+      <div className="container">
         <h2>Subscribe to our Newsletter</h2>
         <p>
           Lorem ipsum text about why you should subscribe to our newsletter
@@ -36,7 +36,7 @@ export default function Form() {
         </p>
       </div>
 
-      <div class="container">
+      <div className="container">
         <input
           type="text"
           placeholder="Name"
@@ -54,7 +54,7 @@ export default function Form() {
         <label></label>
       </div>
 
-      <div class="container">
+      <div className="container">
         <input type="submit" value="Subscribe" />
       </div>
     </form>
