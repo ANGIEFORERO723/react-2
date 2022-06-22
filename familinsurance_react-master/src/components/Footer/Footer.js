@@ -22,7 +22,6 @@ export default class Footer extends Component {
                               <li>
                                   <a href="#!" title="Facebook">
                                       <svg viewBox="0 0 320 512">
-                                         {/*<use xlink:href="assets/img/sprite.svg#facebook-icon"></use>*/}
                                       </svg>
                                   </a>
                               </li>
